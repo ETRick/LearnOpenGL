@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawCircleWithTriangles", "DrawCircleWithTriangles\DrawCircleWithTriangles.vcxproj", "{C99EC038-9389-4E4E-88B2-5A2699C84223}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GL_TRIANGLE_STRIP", "GL_TRIANGLE_STRIP\GL_TRIANGLE_STRIP.vcxproj", "{E8D4BCEA-1C75-4FE4-8A1C-F1F3BC5086F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{C99EC038-9389-4E4E-88B2-5A2699C84223}.Release|x64.Build.0 = Release|x64
 		{C99EC038-9389-4E4E-88B2-5A2699C84223}.Release|x86.ActiveCfg = Release|Win32
 		{C99EC038-9389-4E4E-88B2-5A2699C84223}.Release|x86.Build.0 = Release|Win32
+		{E8D4BCEA-1C75-4FE4-8A1C-F1F3BC5086F4}.Debug|x64.ActiveCfg = Debug|x64
+		{E8D4BCEA-1C75-4FE4-8A1C-F1F3BC5086F4}.Debug|x64.Build.0 = Debug|x64
+		{E8D4BCEA-1C75-4FE4-8A1C-F1F3BC5086F4}.Debug|x86.ActiveCfg = Debug|Win32
+		{E8D4BCEA-1C75-4FE4-8A1C-F1F3BC5086F4}.Debug|x86.Build.0 = Debug|Win32
+		{E8D4BCEA-1C75-4FE4-8A1C-F1F3BC5086F4}.Release|x64.ActiveCfg = Release|x64
+		{E8D4BCEA-1C75-4FE4-8A1C-F1F3BC5086F4}.Release|x64.Build.0 = Release|x64
+		{E8D4BCEA-1C75-4FE4-8A1C-F1F3BC5086F4}.Release|x86.ActiveCfg = Release|Win32
+		{E8D4BCEA-1C75-4FE4-8A1C-F1F3BC5086F4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
