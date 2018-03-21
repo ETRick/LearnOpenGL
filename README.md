@@ -1,9 +1,9 @@
-#张立铜OpenGL课程(https://edu.csdn.net/course/play/3512/)学习的记录
+# 张立铜OpenGL课程(https://edu.csdn.net/course/play/3512/)学习的记录
 
-###环境
+### 环境
 - 系统： win10
 - IDE: VS2015
-###环境配置
+### 环境配置
 
 加入OpenGL的依赖文件，所有依赖在本仓库的Dependencies中
 在 工程属性->配置属性/C++/常规 中，添加 *附加包含目录* 为Dependencies/include的相对路径
