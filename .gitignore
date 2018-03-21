@@ -2,8 +2,8 @@
 Debug/
 
 #project db
-OpenGL-win32/LearnOpenGL/LearnOpenGL.VC.db
+*.db
 
 #.vs
 .vs/
-
+*.opendb
