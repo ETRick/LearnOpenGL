@@ -1,6 +1,9 @@
 #ignore Debug Folders
-OpenGL-win32/LearnOpenGL/Debug/
-OpenGL-win32/LearnOpenGL/DrawCircleWithTriangles/Debug/
+Debug/
 
 #project db
 OpenGL-win32/LearnOpenGL/LearnOpenGL.VC.db
+
+#.vs
+.vs/
+
