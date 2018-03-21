@@ -1,4 +1,4 @@
-# 张立铜OpenGL课程(https://edu.csdn.net/course/play/3512/)学习的记录
+# [张立铜OpenGL课程](https://edu.csdn.net/course/play/3512/)学习的记录
 
 ### 环境
 - 系统： win10
