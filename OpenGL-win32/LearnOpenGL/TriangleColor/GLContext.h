@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <gl/gl.h>
 
@@ -6,11 +6,11 @@ class   GLContext
 {
 protected:
 	int         _format;
-	//! ´°¿Ú¾ä±ú
+	//! çª—å£å¥æŸ„
 	HWND        _hWnd;
-	//! »æÖÆÉè±¸ÉÏÏÂÎÄ
+	//! ç»˜åˆ¶è®¾å¤‡ä¸Šä¸‹æ–‡
 	HDC         _hDC;
-	//! OpenGLÉÏÏÂÎÄ
+	//! OpenGLä¸Šä¸‹æ–‡
 	HGLRC       _hRC;
 public:
 	GLContext()
@@ -26,7 +26,7 @@ public:
 		shutdown();
 	}
 	/**
-	*   ³õÊ¼»¯GL
+	*   åˆå§‹åŒ–GL
 	*/
 	bool    setup(HWND hWnd, HDC hDC)
 	{
@@ -83,7 +83,7 @@ public:
 	}
 
 	/**
-	*   Ïú»ÙEGL
+	*   é”€æ¯EGL
 	*/
 	void    shutdown()
 	{
@@ -101,7 +101,7 @@ public:
 	}
 
 	/**
-	*   ½»»»»º³åÇø
+	*   äº¤æ¢ç¼“å†²åŒº
 	*/
 	void    swapBuffer()
 	{

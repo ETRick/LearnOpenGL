@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include "GLContext.h"
 
@@ -11,7 +11,7 @@ public:
 
 	OpenGLWindow(HINSTANCE hInst = 0)
 	{
-		//1 ×¢²á´°¿ÚÀà
+		//1 æ³¨å†Œçª—å£ç±»
 		WNDCLASSEX  wnd;
 
 		memset(&wnd, 0, sizeof(wnd));
@@ -32,11 +32,11 @@ public:
 
 	virtual bool    main(int w, int h)
 	{
-		//2 ´´½¨´°¿Ú
+		//2 åˆ›å»ºçª—å£
 		HWND hWnd = CreateWindowEx(
 			0
 			, _T("lesson01")
-			, _T("´°¿Ú±êÌâ")
+			, _T("çª—å£æ ‡é¢˜")
 			, WS_OVERLAPPEDWINDOW
 			, 10
 			, 10
@@ -47,7 +47,7 @@ public:
 			, 0
 			, this);
 
-		//!3    ¸üĞÂÏÔÊ¾
+		//!3    æ›´æ–°æ˜¾ç¤º
 		if (hWnd)
 		{
 			UpdateWindow(hWnd);
@@ -68,7 +68,7 @@ public:
 
 		MSG     msg = { 0 };
 
-		//4 ÏûÏ¢Ñ­»·
+		//4 æ¶ˆæ¯å¾ªç¯
 		while (WM_QUIT != msg.message)
 		{
 
@@ -102,7 +102,7 @@ public:
 	}
 
 	/**
-	*   ÏûÏ¢´¦Àí¹ı³Ì
+	*   æ¶ˆæ¯å¤„ç†è¿‡ç¨‹
 	*/
 	virtual LRESULT events(HWND hwnd, UINT msgId, WPARAM wParam, LPARAM lParam)
 	{

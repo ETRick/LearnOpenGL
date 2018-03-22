@@ -1,4 +1,4 @@
-
+ï»¿
 #include <windows.h>
 #include <tchar.h>
 #include <math.h>
@@ -12,14 +12,14 @@ public:
 
 	struct Vertex {
 		float x, y, z;
-		float r, g, b;	//¶¥µãÀïÖ¸¶¨ÁËÑÕÉ«£¬glColor3fº¯Êı¾ÍÊÇÈ¥ÁËĞ§¹û
+		float r, g, b;	//é¡¶ç‚¹é‡ŒæŒ‡å®šäº†é¢œè‰²ï¼ŒglColor3få‡½æ•°å°±æ˜¯å»äº†æ•ˆæœ
 	};
 
 	virtual void    render()
 	{
-		//! Ö¸¶¨ÒÔÏÂµÄ²Ù×÷Õë¶ÔÍ¶Ó°¾ØÕó
+		//! æŒ‡å®šä»¥ä¸‹çš„æ“ä½œé’ˆå¯¹æŠ•å½±çŸ©é˜µ
 		glMatrixMode(GL_PROJECTION);
-		//! ½«Í¶Ó°¾ÙÖ¤Çå¿Õ³Éµ¥Î»¾ØÕó
+		//! å°†æŠ•å½±ä¸¾è¯æ¸…ç©ºæˆå•ä½çŸ©é˜µ
 		glLoadIdentity();
 		glOrtho(0, _width, _height, 0, -100, 100);
 
@@ -32,10 +32,10 @@ public:
 			{110, 110, 0, 1, 0, 1},
 		};
 		
-		glEnableClientState(GL_VERTEX_ARRAY);	// ÆôÓÃÎ»ÖÃÊı×é
-		glEnableClientState(GL_COLOR_ARRAY);	// ÆôÓÃÑÕÉ«Êı×é
+		glEnableClientState(GL_VERTEX_ARRAY);	// å¯ç”¨ä½ç½®æ•°ç»„
+		glEnableClientState(GL_COLOR_ARRAY);	// å¯ç”¨é¢œè‰²æ•°ç»„
 		glVertexPointer(3, GL_FLOAT, sizeof(Vertex), rect);
-		glColorPointer(3, GL_FLOAT, sizeof(Vertex), &rect[0].r);		// Èı¸öfloat£¬ÆğÊ¼Î»ÖÃÊÇr
+		glColorPointer(3, GL_FLOAT, sizeof(Vertex), &rect[0].r);		// ä¸‰ä¸ªfloatï¼Œèµ·å§‹ä½ç½®æ˜¯r
 		glDrawArrays(GL_TRIANGLE_STRIP , 0, 4);
 	}
 };

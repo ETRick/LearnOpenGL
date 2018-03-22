@@ -1,4 +1,4 @@
-
+ï»¿
 #include <windows.h>
 #include <tchar.h>
 #include <math.h>
@@ -7,7 +7,7 @@
 #define M_PI (3.14159265358979323846)
 
 /*
-OPENGL_Èı½ÇĞÎ´øGL_TRIANGLE_STRIPÏê½â
+OPENGL_ä¸‰è§’å½¢å¸¦GL_TRIANGLE_STRIPè¯¦è§£
 http://blog.csdn.net/onafioo/article/details/39454233
 */
 
@@ -23,9 +23,9 @@ public:
 
 	virtual void    render()
 	{
-		//! Ö¸¶¨ÒÔÏÂµÄ²Ù×÷Õë¶ÔÍ¶Ó°¾ØÕó
+		//! æŒ‡å®šä»¥ä¸‹çš„æ“ä½œé’ˆå¯¹æŠ•å½±çŸ©é˜µ
 		glMatrixMode(GL_PROJECTION);
-		//! ½«Í¶Ó°¾ÙÖ¤Çå¿Õ³Éµ¥Î»¾ØÕó
+		//! å°†æŠ•å½±ä¸¾è¯æ¸…ç©ºæˆå•ä½çŸ©é˜µ
 		glLoadIdentity();
 		glOrtho(0, _width, _height, 0, -100, 100);
 
@@ -46,7 +46,7 @@ public:
 			_circle[i].z = cz;
 		}
 		glEnableClientState(GL_VERTEX_ARRAY);
-		// µÚÈı¸ö²ÎÊıÎªÆ«ÒÆÁ¿£¬ÓÃÀ´»ñÈ¡ÏÂÒ»¸öÊı¾İµÄÎ»ÖÃ£¬0±íÊ¾3¸öGL_FLOATµÄÆ«ÒÆ£¬¿ÉÒÔ»»³Ésizeof(float3)
+		// ç¬¬ä¸‰ä¸ªå‚æ•°ä¸ºåç§»é‡ï¼Œç”¨æ¥è·å–ä¸‹ä¸€ä¸ªæ•°æ®çš„ä½ç½®ï¼Œ0è¡¨ç¤º3ä¸ªGL_FLOATçš„åç§»ï¼Œå¯ä»¥æ¢æˆsizeof(float3)
 		glVertexPointer(3, GL_FLOAT, 0, _circle);
 		glDrawArrays(GL_TRIANGLE_FAN, 0, 362);
 	}
