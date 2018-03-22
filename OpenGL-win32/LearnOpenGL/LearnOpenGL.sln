@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TriangleColor", "TriangleCo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawLine", "DrawLine\DrawLine.vcxproj", "{350C9671-41A6-4D69-8806-A57CD58E858A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BezierLine", "BezierLine\BezierLine.vcxproj", "{502621D9-1A96-4153-9D5E-11FE4B9E0324}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{350C9671-41A6-4D69-8806-A57CD58E858A}.Release|x64.Build.0 = Release|x64
 		{350C9671-41A6-4D69-8806-A57CD58E858A}.Release|x86.ActiveCfg = Release|Win32
 		{350C9671-41A6-4D69-8806-A57CD58E858A}.Release|x86.Build.0 = Release|Win32
+		{502621D9-1A96-4153-9D5E-11FE4B9E0324}.Debug|x64.ActiveCfg = Debug|x64
+		{502621D9-1A96-4153-9D5E-11FE4B9E0324}.Debug|x64.Build.0 = Debug|x64
+		{502621D9-1A96-4153-9D5E-11FE4B9E0324}.Debug|x86.ActiveCfg = Debug|Win32
+		{502621D9-1A96-4153-9D5E-11FE4B9E0324}.Debug|x86.Build.0 = Debug|Win32
+		{502621D9-1A96-4153-9D5E-11FE4B9E0324}.Release|x64.ActiveCfg = Release|x64
+		{502621D9-1A96-4153-9D5E-11FE4B9E0324}.Release|x64.Build.0 = Release|x64
+		{502621D9-1A96-4153-9D5E-11FE4B9E0324}.Release|x86.ActiveCfg = Release|Win32
+		{502621D9-1A96-4153-9D5E-11FE4B9E0324}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
