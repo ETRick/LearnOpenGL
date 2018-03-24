@@ -1,0 +1,80 @@
+﻿
+#include <windows.h>
+#include <tchar.h>
+#include <math.h>
+#include "glew/glew.h"
+#include "OpenGLWindow.h"
+#define M_PI (3.14159265358979323846)
+
+class   Demo :public OpenGLWindow
+{
+public:
+
+	struct float3 {
+		float x, y, z;
+	};
+
+	float3 _circle[360 * 3];
+
+	virtual void onInitGL() {
+		glewInit();
+	}
+
+	virtual void    render()
+	{
+		//方便的可以用扩展库glew 
+		// 可以用编译好的库，也可以拷贝源文件进来
+		// 预处理器中加 GLEW_STATIC
+
+		// 获取扩展
+		char* ext = (char*)glGetString(GL_EXTENSIONS);
+		PFNGLARRAYELEMENTEXTPROC glArrayElementEXT = (PFNGLARRAYELEMENTEXTPROC)wglGetProcAddress("glArrayElementEXT");
+		glArrayElementEXT(0);
+
+
+		//! 指定以下的操作针对投影矩阵
+		glMatrixMode(GL_PROJECTION);
+		//! 将投影举证清空成单位矩阵
+		glLoadIdentity();
+		glOrtho(0, _width, _height, 0, -100, 100);
+
+		float cx = 100;
+		float cy = 100;
+		float cz = 0;
+		float r = 80;
+
+		glColor3f(1, 1, 1);
+		for (int i = 0; i < 360; ++i) {
+			_circle[i * 3 + 0].x = cx;
+			_circle[i * 3 + 0].y = cy;
+			_circle[i * 3 + 0].z = cz;
+
+			_circle[i * 3 + 1].x = (float)cos((double)i * M_PI / 180) * r + cx;
+			_circle[i * 3 + 1].y = (float)sin((double)i * M_PI / 180) * r + cy;
+			_circle[i * 3 + 1].z = cz;
+
+			_circle[i * 3 + 2].x = (float)cos((double)(i + 1) * M_PI / 180) * r + cx;
+			_circle[i * 3 + 2].y = (float)sin((double)(i + 1) * M_PI / 180) * r + cy;
+			_circle[i * 3 + 2].z = cz;
+		}
+		glEnableClientState(GL_VERTEX_ARRAY);
+		// 第三个参数为偏移量，用来获取下一个数据的位置，0表示3个GL_FLOAT的偏移，可以换成sizeof(float3)
+		glVertexPointer(3, GL_FLOAT, 0, _circle);
+		glDrawArrays(GL_TRIANGLES, 0, 360 * 3);
+	}
+};
+
+int __stdcall WinMain(
+	HINSTANCE hInstance,
+	HINSTANCE hPrevInstance,
+	LPSTR lpCmdLine,
+	int nShowCmd
+)
+{
+
+	Demo    instance;
+	instance.main(800, 600);
+
+
+	return  0;
+}
