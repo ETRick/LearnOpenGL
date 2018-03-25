@@ -29,6 +29,9 @@ public:
 		RegisterClassEx(&wnd);
 	}
 
+	virtual void onInitGL() {
+	}
+
 
 	virtual bool    main(int w, int h)
 	{
@@ -63,8 +66,8 @@ public:
 		{
 			return  false;
 		}
-
-
+		
+		onInitGL();
 
 		MSG     msg = { 0 };
 
