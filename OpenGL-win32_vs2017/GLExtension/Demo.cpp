@@ -2,7 +2,7 @@
 #include <windows.h>
 #include <tchar.h>
 #include <math.h>
-
+#include "glew/glew.h"
 #include "OpenGLWindow.h"
 #define M_PI (3.14159265358979323846)
 
@@ -16,8 +16,22 @@ public:
 
 	float3 _circle[360 * 3];
 
+	virtual void onInitGL() {
+		glewInit();
+	}
+
 	virtual void    render()
 	{
+		//方便的可以用扩展库glew 
+		// 可以用编译好的库，也可以拷贝源文件进来
+		// 预处理器中加 GLEW_STATIC
+
+		// 获取扩展
+		char* ext = (char*)glGetString(GL_EXTENSIONS);
+		PFNGLARRAYELEMENTEXTPROC glArrayElementEXT = (PFNGLARRAYELEMENTEXTPROC)wglGetProcAddress("glArrayElementEXT");
+		glArrayElementEXT(0);
+
+
 		//! 指定以下的操作针对投影矩阵
 		glMatrixMode(GL_PROJECTION);
 		//! 将投影举证清空成单位矩阵

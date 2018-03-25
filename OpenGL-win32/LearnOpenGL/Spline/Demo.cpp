@@ -2,24 +2,36 @@
 #include <windows.h>
 #include <tchar.h>
 #include <math.h>
+#include "CELLMath.hpp"
+#include <vector>
 
 #include "OpenGLWindow.h"
-#define M_PI (3.14159265358979323846)
 
-/*
-OPENGL_三角形带GL_TRIANGLE_STRIP详解
-http://blog.csdn.net/onafioo/article/details/39454233
-*/
+using namespace CELL;
 
 class   Demo :public OpenGLWindow
 {
 public:
 
-	struct float3 {
-		float x, y, z;
-	};
+	tspline<float> _spline;
 
-	float3 _circle[362];
+	std::vector<float3> _array;
+
+	Demo() {
+		// 关键点
+		_spline.addPoint(float3(10, 10, 0));
+		_spline.addPoint(float3(20, 100, 0));
+		_spline.addPoint(float3(100, 80, 0));
+		_spline.addPoint(float3(200, 100, 0));
+		_spline.addPoint(float3(300, 10, 0));
+		_spline.addPoint(float3(400, 150, 0));
+
+		// 插值
+		for (float t = 0; t < 1.0f; t += 0.01f) {
+			float3 pos = _spline.interpolate(t);
+			_array.push_back(pos);
+		}
+	}
 
 	virtual void    render()
 	{
@@ -28,27 +40,11 @@ public:
 		//! 将投影举证清空成单位矩阵
 		glLoadIdentity();
 		glOrtho(0, _width, _height, 0, -100, 100);
-
-		float cx = 100;
-		float cy = 100;
-		float cz = 0;
-		float r = 80;
-
-		glColor3f(1, 1, 1);
-
-		_circle[0].x = cx;
-		_circle[0].y = cy;
-		_circle[0].z = cz;
-
-		for (int i = 1; i < 362; ++i) {
-			_circle[i].x = (float)cos((double)i * M_PI / 180) * r + cx;
-			_circle[i].y = (float)sin((double)i * M_PI / 180) * r + cy;
-			_circle[i].z = cz;
-		}
+		
 		glEnableClientState(GL_VERTEX_ARRAY);
 		// 第三个参数为偏移量，用来获取下一个数据的位置，0表示3个GL_FLOAT的偏移，可以换成sizeof(float3)
-		glVertexPointer(3, GL_FLOAT, 0, _circle);
-		glDrawArrays(GL_TRIANGLE_FAN, 0, 362);
+		glVertexPointer(3, GL_FLOAT, sizeof(float3), &_array[0]);
+		glDrawArrays(GL_LINE_STRIP, 0, _array.size());
 	}
 };
 
