@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SolarSystem", "SolarSystem\SolarSystem.vcxproj", "{F9400356-3AC4-4D0F-B393-0814C8ED891A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextureStartStep", "TextureStartStep\TextureStartStep.vcxproj", "{FBF9EFC9-5E89-4629-97DD-D254CF041CAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{F9400356-3AC4-4D0F-B393-0814C8ED891A}.Release|x64.Build.0 = Release|x64
 		{F9400356-3AC4-4D0F-B393-0814C8ED891A}.Release|x86.ActiveCfg = Release|Win32
 		{F9400356-3AC4-4D0F-B393-0814C8ED891A}.Release|x86.Build.0 = Release|Win32
+		{FBF9EFC9-5E89-4629-97DD-D254CF041CAD}.Debug|x64.ActiveCfg = Debug|x64
+		{FBF9EFC9-5E89-4629-97DD-D254CF041CAD}.Debug|x64.Build.0 = Debug|x64
+		{FBF9EFC9-5E89-4629-97DD-D254CF041CAD}.Debug|x86.ActiveCfg = Debug|Win32
+		{FBF9EFC9-5E89-4629-97DD-D254CF041CAD}.Debug|x86.Build.0 = Debug|Win32
+		{FBF9EFC9-5E89-4629-97DD-D254CF041CAD}.Release|x64.ActiveCfg = Release|x64
+		{FBF9EFC9-5E89-4629-97DD-D254CF041CAD}.Release|x64.Build.0 = Release|x64
+		{FBF9EFC9-5E89-4629-97DD-D254CF041CAD}.Release|x86.ActiveCfg = Release|Win32
+		{FBF9EFC9-5E89-4629-97DD-D254CF041CAD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
