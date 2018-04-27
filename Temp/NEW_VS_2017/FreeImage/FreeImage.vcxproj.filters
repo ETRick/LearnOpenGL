@@ -15,19 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Demo.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
+    <ClInclude Include="CELLMath.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
     <ClInclude Include="GLContext.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="OpenGLWindow.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CELLMath.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Demo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

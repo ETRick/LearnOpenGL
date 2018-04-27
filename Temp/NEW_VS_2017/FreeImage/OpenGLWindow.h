@@ -29,6 +29,9 @@ public:
 		RegisterClassEx(&wnd);
 	}
 
+	virtual void    onInitGL()
+	{
+	}
 
 	virtual bool    main(int w, int h)
 	{
@@ -47,6 +50,7 @@ public:
 			, 0
 			, this);
 
+		onInitGL();
 		//!3    更新显示
 		if (hWnd)
 		{
